@@ -7,7 +7,7 @@ Usage: `ListBlocking [@KillOrphanedProcesses = 0] `
 
 If `@KillOrphanedProcesses` is set to 1 then the script will attempt to kill orphaned processes.
 
-```cpp
+```tsql
 IF NOT EXISTS (SELECT * FROM sys.objects 
 WHERE object_id = OBJECT_ID(N'[dbo].[ListBlocking]') 
 AND type in (N'P', N'PC'))
